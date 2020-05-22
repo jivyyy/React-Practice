@@ -20,6 +20,8 @@ class Login_JIA extends Component {
     });
   };
 
+  
+
   typePw = (e) => {
     this.setState({
       loginByPw: e.target.value,
