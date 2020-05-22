@@ -1,4 +1,5 @@
-import React from "react";
+import React, {Component} from "react";
+import { Link } from 'react-router-dom';
 import "./Login_JIA.scss";
 import logo from "../../../Images/Images_JIA/logo_text.png";
 import phone from "../../../Images/Images_JIA/phone.png";
@@ -6,7 +7,7 @@ import facebook from "../../../Images/Images_JIA/facebook.png";
 import ios from "../../../Images/Images_JIA/ios.png";
 import googleplay from "../../../Images/Images_JIA/googleplay.png";
 
-class Login_JIA extends React.Component {
+class Login_JIA extends Component {
   state = {
     loginById: "",
     loginByPw: "",
@@ -29,7 +30,7 @@ class Login_JIA extends React.Component {
     console.log(this.state.loginById);
     console.log(this.state.loginBy);
 
-    fetch("http://10.58.4.172:8000/account/signin", {
+    fetch("http://10.58.7.154:8000/accounts/signin", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -127,9 +128,9 @@ class Login_JIA extends React.Component {
                 <div className="signup-box">
                   <p>
                     계정이 없으신가요?{" "}
-                    <a href="a" className="link-to-sign">
+                    <Link to="/signup_jia" className="link-to-sign">
                       가입하기
-                    </a>
+                    </Link>
                   </p>
                 </div>
                 <div className="download">

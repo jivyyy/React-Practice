@@ -37,7 +37,7 @@ class SignUp_NW extends React.Component{
        
     render(){
         return(
-            <div className = "SignUp">
+            <div className = "SignUp_NW">
                 <div className = "logo_img"><img alt ="Logo_img" src = {logo}/></div>
                 <div className = 'text-type'>친구들의 사진과 동영상을 보려면 가입을 하세요.</div>
                 <button className = "btn-facebook-login">Facebook으로 로그인</button>
